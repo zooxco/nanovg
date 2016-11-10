@@ -183,13 +183,13 @@ extern NVG_EXPORT void nvgEndFrame(NVGcontext* ctx);
 // The colors in the blending state have premultiplied alpha.
 
 // Sets the composite operation. The op parameter should be one of NVGcompositeOperation.
-void nvgGlobalCompositeOperation(NVGcontext* ctx, int op);
+extern NVG_EXPORT void nvgGlobalCompositeOperation(NVGcontext* ctx, int op);
 
 // Sets the composite operation with custom pixel arithmetic. The parameters should be one of NVGblendFactor.
-void nvgGlobalCompositeBlendFunc(NVGcontext* ctx, int sfactor, int dfactor);
+extern NVG_EXPORT void nvgGlobalCompositeBlendFunc(NVGcontext* ctx, int sfactor, int dfactor);
 
 // Sets the composite operation with custom pixel arithmetic for RGB and alpha components separately. The parameters should be one of NVGblendFactor.
-void nvgGlobalCompositeBlendFuncSeparate(NVGcontext* ctx, int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
+extern NVG_EXPORT void nvgGlobalCompositeBlendFuncSeparate(NVGcontext* ctx, int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
 
 //
 // Color utils
@@ -506,7 +506,7 @@ extern NVG_EXPORT void nvgRect(NVGcontext* ctx, float x, float y, float w, float
 extern NVG_EXPORT void nvgRoundedRect(NVGcontext* ctx, float x, float y, float w, float h, float r);
 
 // Creates new rounded rectangle shaped sub-path with varying radii for each corner.
-void nvgRoundedRectVarying(NVGcontext* ctx, float x, float y, float w, float h, float radTopLeft, float radTopRight, float radBottomRight, float radBottomLeft);
+extern NVG_EXPORT void nvgRoundedRectVarying(NVGcontext* ctx, float x, float y, float w, float h, float radTopLeft, float radTopRight, float radBottomRight, float radBottomLeft);
 
 // Creates new ellipse shaped sub-path.
 extern NVG_EXPORT void nvgEllipse(NVGcontext* ctx, float cx, float cy, float rx, float ry);
@@ -566,10 +566,10 @@ extern NVG_EXPORT int nvgCreateFontMem(NVGcontext* ctx, const char* name, unsign
 extern NVG_EXPORT int nvgFindFont(NVGcontext* ctx, const char* name);
 
 // Adds a fallback font by handle.
-int nvgAddFallbackFontId(NVGcontext* ctx, int baseFont, int fallbackFont);
+extern NVG_EXPORT int nvgAddFallbackFontId(NVGcontext* ctx, int baseFont, int fallbackFont);
 
 // Adds a fallback font by name.
-int nvgAddFallbackFont(NVGcontext* ctx, const char* baseFont, const char* fallbackFont);
+extern NVG_EXPORT int nvgAddFallbackFont(NVGcontext* ctx, const char* baseFont, const char* fallbackFont);
 
 // Sets the font size of current text style.
 extern NVG_EXPORT void nvgFontSize(NVGcontext* ctx, float size);
